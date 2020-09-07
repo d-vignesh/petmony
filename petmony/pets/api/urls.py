@@ -8,4 +8,6 @@ urlpatterns = [
     path("breed/<int:pk>", views.BreedDetailAPIView.as_view()),
     path("category/", views.CategoryListAPIView.as_view()),
     path("category/<int:pk>", views.CategoryDetailAPIView.as_view()),
+    path("", views.PetListAPIView.as_view()),
+    path("<str:pk>/", views.PetRetrieveUpdateAPIView.as_view()),
 ]
